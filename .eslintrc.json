@@ -1,4 +1,14 @@
 {
   "extends": ["next", "plugin:tailwindcss/recommended", "prettier"],
-  "plugins": ["tailwindcss"]
+  "plugins": ["tailwindcss"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-no-useless-fragment": ["warn", { "allowExpressions": true }],
+    "react/jsx-curly-brace-presence": "warn",
+    "react/jsx-boolean-value": "warn",
+    "react/prop-types": "off",
+    "react/self-closing-comp": "warn",
+    "react/jsx-fragments": "warn",
+    "react/hook-use-state": "warn"
+  }
 }
