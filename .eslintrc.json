@@ -31,6 +31,8 @@
     "react/prop-types": "off",
     "react/self-closing-comp": "warn",
     "react/jsx-fragments": "warn",
-    "react/hook-use-state": "warn"
+    "react/hook-use-state": "warn",
+    "import/newline-after-import": ["warn", { "count": 1 }],
+    "import/no-cycle": "error"
   }
 }
