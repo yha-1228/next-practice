@@ -1,7 +1,29 @@
 {
-  "extends": ["next", "plugin:tailwindcss/recommended", "prettier"],
-  "plugins": ["tailwindcss"],
+  "extends": [
+    "next",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "tailwindcss"],
   "rules": {
+    "dot-notation": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "ignoreRestSiblings": true,
+        "destructuredArrayIgnorePattern": "^_"
+      }
+    ],
+    "no-useless-rename": "warn",
+    "no-duplicate-imports": "warn",
+    "@typescript-eslint/naming-convention": [
+      "warn",
+      { "selector": "typeAlias", "format": ["PascalCase"] },
+      { "selector": "interface", "format": ["PascalCase"] }
+    ],
     "react/react-in-jsx-scope": "off",
     "react/jsx-no-useless-fragment": ["warn", { "allowExpressions": true }],
     "react/jsx-curly-brace-presence": "warn",
